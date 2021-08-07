@@ -1,5 +1,4 @@
 const sql = require('mysql')
-console.log(process.env.DB_HOST)
 var dbconnect = sql.createConnection({
     host      : process.env.DB_HOST,
     user      : process.env.DB_USER,
@@ -9,6 +8,5 @@ var dbconnect = sql.createConnection({
   });
 dbconnect.connect(function(err) {
     if (err) throw err;
-    console.log("Database Connected!");
 });
 module.exports = {dbconnect}
